@@ -67,35 +67,11 @@
     \begingroup%
         \pgfmath@x=#1pt\relax%
         \pgfmath@y=#2pt\relax%
-        \let\pgfmath@sign=\pgfmath@empty%
         \ifdim0pt=\pgfmath@y%
             \pgfmath@error{You've asked me to divide `#1' by `#2', %
                 but I cannot divide any number by `#2'}%
         \fi%
-        \afterassignment\pgfmath@xa%
-        \c@pgfmath@counta\the\pgfmath@y\relax%
-        \ifdim0pt=\pgfmath@xa%
-            \divide\pgfmath@x by\c@pgfmath@counta%
-        \else%
-            \ifdim0pt>\pgfmath@x%
-                \def\pgfmath@sign{-}%
-                \pgfmath@x=-\pgfmath@x%
-            \fi%
-            \ifdim0pt>\pgfmath@y%
-                \expandafter\def\expandafter\pgfmath@sign\expandafter{\pgfmath@sign-}%
-                \pgfmath@y=-\pgfmath@y%
-            \fi%
-            \ifdim1pt>\pgfmath@y%
-                \pgfmathreciprocal@{\pgfmath@tonumber{\pgfmath@y}}%
-                \pgfmath@x=\pgfmath@sign\pgfmathresult\pgfmath@x%
-            \else%
-                \def\pgfmathresult{0}%
-                \pgfmath@divide@periodtrue%
-                \c@pgfmath@counta=0\relax%
-                \pgfmathdivide@@%
-                \pgfmath@x=\pgfmath@sign\pgfmathresult pt\relax%
-            \fi%
-        \fi%
+        \pgfmath@x=\dimexpr 1pt * \pgfmath@x / \pgfmath@y \relax
         \pgfmath@returnone\pgfmath@x%
     \endgroup%
 }
@@ -207,44 +183,8 @@
         \ifdim\pgfmath@x=0pt\relax%
             \pgfmath@error{You asked me to calculate `1/#1', but I cannot divide any number by zero}{}%
         \fi%
-        \edef\pgfmath@reciprocaltemp{\pgfmath@tonumber{\pgfmath@x}}%
-        \expandafter\pgfmathreciprocal@@\pgfmath@reciprocaltemp0000000\pgfmath@}
-\def\pgfmathreciprocal@@#1.#2#3#4#5#6#7\pgfmath@{%
-        \c@pgfmath@counta#2#3#4#5#6\relax%
-        % If the number is an integer, use TeX arithmetic.
-        \ifnum\c@pgfmath@counta=0\relax%
-            \pgfmath@x1pt\relax%
-            \divide\pgfmath@x#1\relax%
-        \else%
-            \ifnum#1>100\relax%
-                \c@pgfmath@counta#1#2#3#4\relax%
-                \c@pgfmath@countb1000000000\relax%
-                \divide\c@pgfmath@countb\c@pgfmath@counta%
-                \c@pgfmath@counta\c@pgfmath@countb%
-                \divide\c@pgfmath@counta10000\relax%
-                \pgfmath@x\c@pgfmath@counta pt\relax%
-                \multiply\c@pgfmath@counta-10000\relax%
-                \advance\c@pgfmath@countb\c@pgfmath@counta%
-                \pgfmath@y\c@pgfmath@countb pt\relax%
-                \divide\pgfmath@y1000000\relax%
-                \advance\pgfmath@x\pgfmath@y%
-            \else%
-                \c@pgfmath@counta#1#2#3#4#5#6\relax%
-                \c@pgfmath@countb1000000000\relax%
-                \divide\c@pgfmath@countb\c@pgfmath@counta%
-                \c@pgfmath@counta\c@pgfmath@countb%
-                \divide\c@pgfmath@counta10000\relax%
-                \pgfmath@x\c@pgfmath@counta pt\relax%
-                \multiply\c@pgfmath@counta-10000\relax%
-                \advance\c@pgfmath@countb\c@pgfmath@counta%
-                \pgfmath@y\c@pgfmath@countb pt\relax%
-                \pgfmath@y.1\pgfmath@y% Yes! This way is more accurate. Go figure...
-                \pgfmath@y.1\pgfmath@y%
-                \pgfmath@y.1\pgfmath@y%
-                \pgfmath@y.1\pgfmath@y%
-                \advance\pgfmath@x\pgfmath@y%
-            \fi%
-        \fi%
+        \dimen0=1pt
+        \pgfmath@x=\dimexpr 1pt * \dimen0 / \pgfmath@x \relax
         \pgfmath@returnone\pgfmath@x%
     \endgroup%
 }
