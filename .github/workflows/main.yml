@@ -25,7 +25,77 @@ jobs:
         key: texlive
 
     - name: Set up TeX Live environment
-      run: . ci/texlive.sh
+      uses: ./.github/actions/install-tl
+      with:
+        packages:
+          amsfonts
+          amsmath
+          atbegshi
+          atveryend
+          bigintcalc
+          bitset
+          colortbl
+          courier
+          ctablestack
+          dvipdfmx
+          dvips
+          dvisvgm
+          ec
+          epstopdf-pkg
+          etexcmds
+          fp
+          geometry
+          gettitlestring
+          graphics
+          graphics-def
+          hycolor
+          hyperref
+          iftex
+          imakeidx
+          intcalc
+          kvdefinekeys
+          kvoptions
+          kvsetkeys
+          latex
+          latex-bin
+          letltxmacro
+          listings
+          lm
+          ltxcmds
+          luainputenc
+          luaotfload
+          luatex
+          luatexbase
+          luaxml
+          make4ht
+          makeindex
+          metafont
+          mfware
+          ms
+          oberdiek
+          pdfescape
+          pdftexcmds
+          psnfss
+          refcount
+          rerunfilecheck
+          stringenc
+          symbol
+          tex4ht
+          texlive-scripts
+          times
+          todonotes
+          tools
+          uniquecounter
+          url
+          xcolor
+          xetex
+          xkeyval
+          zapfding
+
+    - name: 'Install PGF'
+      run: |
+        tlmgr init-usertree --usertree $PWD
+        echo "TEXMFHOME=$PWD" >> ${GITHUB_ENV:-/dev/null}
 
     - name: Generate the revision file
       run: |

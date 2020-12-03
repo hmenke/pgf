@@ -1,0 +1,60 @@
+name: 'Install TeX Live'
+inputs:
+  path:
+    description: 'Where to install TeX Live'
+    required: false
+    default: '/tmp/texlive'
+  scheme:
+    description: 'The scheme to base on'
+    required: false
+    default: 'scheme-infraonly'
+  packages:
+    description: 'What packages to install'
+    required: false
+runs:
+  using: 'composite'
+  steps:
+    - name: 'Add installation directory to PATH'
+      run: echo "${{ inputs.path }}/bin/x86_64-linux" >> $GITHUB_PATH
+      shell: bash
+    - name: 'Install TeX Live'
+      run: |
+        TMPDIR=$(mktemp -d)
+        mkdir -p "$TMPDIR"
+        cd "$TMPDIR"
+        cat <<EOF > texlive.profile
+        selected_scheme ${{ inputs.scheme }}
+        TEXDIR /tmp/texlive
+        TEXMFCONFIG ~/.texlive/texmf-config
+        TEXMFHOME ~/texmf
+        TEXMFLOCAL /tmp/texlive/texmf-local
+        TEXMFSYSCONFIG /tmp/texlive/texmf-config
+        TEXMFSYSVAR /tmp/texlive/texmf-var
+        TEXMFVAR ~/.texlive/texmf-var
+        option_doc 0
+        option_src 0
+        EOF
+
+        # Check for cached version
+        if ! command -v texlua > /dev/null; then
+          # Obtain TeX Live
+          curl -LO http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+          tar -xzf install-tl-unx.tar.gz --strip-components=1
+        
+          # Install a minimal system
+          ./install-tl --profile=texlive.profile
+        fi
+        cd -
+      shell: bash
+    - name: 'Update infra first'
+      run: tlmgr update --self
+      shell: bash
+    - name: 'Install all the required packages'
+      run: tlmgr install ${{ inputs.packages }}
+      shell: bash
+    - name: 'Keep no backups (not required, simply makes cache bigger)'
+      run: tlmgr option -- autobackup 0
+      shell: bash
+    - name: 'Update the TL install but add nothing new'
+      run: tlmgr update --self --all --no-auto-install
+      shell: bash
