@@ -24,7 +24,7 @@ runs:
         cd "$TMPDIR"
         cat <<EOF | tee texlive.profile
         selected_scheme ${{ inputs.scheme }}
-        TEXDIR ${{ input.path }}
+        TEXDIR ${{ inputs.path }}
         TEXMFCONFIG ~/.texlive/texmf-config
         TEXMFHOME ~/texmf
         TEXMFLOCAL /tmp/texlive/texmf-local

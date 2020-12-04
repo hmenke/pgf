@@ -92,7 +92,7 @@ runs:
           str=${str//\"/\\\"}
           printf '"%s"' "$str"
         }
-        
+
         cat <<EOF | curl --config -
         ${announcement:+form = $(escape "announcement=$announcement")}
         $(IFS=';'; for a in $author; do echo "form = $(escape "author=$a")"; done)
