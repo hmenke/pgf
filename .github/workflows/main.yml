@@ -240,7 +240,7 @@ jobs:
         ctanPath: /graphics/pgf/base
         description: '<doc/generic/pgf/description.html'
         email: pgf-tikz@tug.org
-        file: '@pgf_${{ env.GIT_TAG }}.ctan.flatdir.zip'
+        file: 'pgf_${{ env.GIT_TAG }}.ctan.flatdir.zip'
         license: 'fdl;gpl2;lppl1.3c'
         note: |
           The release files are signed using a detached signature.  You can obtain the
