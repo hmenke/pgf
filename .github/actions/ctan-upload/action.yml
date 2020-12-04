@@ -45,6 +45,9 @@ inputs:
   summary:
     required: true
     description: 'This field contains a short one-line description of the package.'
+  support:
+    required: false
+    description: 'URL of the support channel'
   topic:
     required: false
     description: 'Classification into topics of the catalogue. Several topics can be specified.'
@@ -78,6 +81,7 @@ runs:
         pkg: ${{ inputs.pkg }}
         repository: ${{ inputs.repository }}
         summary: ${{ inputs.summary }}
+        support: ${{ inputs.support }}
         topic: ${{ inputs.topic }}
         update: ${{ inputs.update }}
         uploader: ${{ inputs.uploader }}
@@ -108,6 +112,7 @@ runs:
         form = $(escape "pkg=$pkg")
         ${repository:+form = $(escape "repository=$repository")}
         form = $(escape "summary=$summary")
+        form = $(escape "support=$support")
         ${topic:+form = $(escape "topic=$topic")}
         form = $(escape "update=$update")
         form = $(escape "uploader=$uploader")
