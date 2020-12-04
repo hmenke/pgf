@@ -1,0 +1,116 @@
+name: 'Upload archive to CTAN'
+inputs:
+  action:
+    required: true
+    description: 'Action to perform. Either validate or upload.'
+  announcement:
+    required: false
+    description: 'Text for the announcement on the CTAN mailing list. If no text is present then no announcement will be sent.'
+  author:
+    required: true
+    description: 'Name or the names of the authors. Several authors can be separated by semicolon or several author fields can be specified.'
+  bugs:
+    required: false
+    description: 'URL of the bug tracker for the package.'
+  ctanPath:
+    required: false
+    description: 'Proposed path in the CTAN archive. This is the part after /tex-archive when browsing the archive in the Web portal.'
+  description:
+    required: true
+    description: 'Abstract description of the package.'
+  email:
+    required: true
+    description: 'Email address of the uploader.'
+  file:
+    required: true
+    description: 'The file to upload.'
+  home:
+    required: false
+    description: 'The value of this field is the URL of the package´s home page.'
+  license:
+    required: true
+    description: 'Licenses associated with the package or parts thereof.'
+  mailinglist:
+    required: false
+    description: 'URL of the mailing list of the package.'
+  note:
+    required: false
+    description: 'Note to the upload managers on CTAN. Any additional information which is useful for processing the upload or categorizing the package can be given here. The text is for communication purposes only. It is not shown publicly.'
+  pkg:
+    required: true
+    description: 'Name of the package. It consists of lower case letters, digits, the minus sign, or the underscore. The first character must be a lower-case letter.'
+  repository:
+    required: false
+    description: 'URL of the package´s repository.'
+  summary:
+    required: true
+    description: 'This field contains a short one-line description of the package.'
+  topic:
+    required: false
+    description: 'Classification into topics of the catalogue. Several topics can be specified.'
+  update:
+    required: true
+    description: 'Value true if the package already exists on CTAN and false if it is a new package.'
+  uploader:
+    required: true
+    description: 'Name of the uploader. The uploader can be different from the author. In this case he needs to be permitted by an author to do so.'
+  version:
+    required: true
+    description: 'Version number of the package. No numbering scheme is imposed. An updated package must just have a different version number than the current version on CTAN.'
+runs:
+  using: 'composite'
+  steps:
+    - name: 'Install TeX Live'
+      shell: bash
+      env:
+        action: ${{ inputs.action }}
+        announcement: ${{ inputs.announcement }}
+        author: ${{ inputs.author }}
+        bugs: ${{ inputs.bugs }}
+        ctanPath: ${{ inputs.ctanPath }}
+        description: ${{ inputs.description }}
+        email: ${{ inputs.email }}
+        file: ${{ inputs.file }}
+        home: ${{ inputs.home }}
+        license: ${{ inputs.license }}
+        mailinglist: ${{ inputs.mailinglist }}
+        note: ${{ inputs.note }}
+        pkg: ${{ inputs.pkg }}
+        repository: ${{ inputs.repository }}
+        summary: ${{ inputs.summary }}
+        topic: ${{ inputs.topic }}
+        update: ${{ inputs.update }}
+        uploader: ${{ inputs.uploader }}
+        version: ${{ inputs.version }}
+      run: |
+        escape() {
+          local str
+          str=${1@Q}
+          str=${str##\$}
+          str=${str##\'}
+          str=${str%%\'}
+          str=${str//\"/\\\"}
+          printf '"%s"' "$str"
+        }
+        
+        cat <<EOF | curl --config -
+        ${announcement:+form = $(escape "announcement=$announcement")}
+        $(IFS=';'; for a in $author; do echo "form = $(escape "author=$a")"; done)
+        ${bugs:+form = $(escape "bugs=$bugs")}
+        ${ctanPath:+form = $(escape "ctanPath=$ctanPath")}
+        form = $(escape "description=$description")
+        form = $(escape "email=$email")
+        form = $(escape "file=@$file")
+        ${home:+form = $(escape "home=$home")}
+        $(IFS='; '; for l in $license; do echo "form = $(escape "license=$l")"; done)
+        ${mailinglist:+form = $(escape "mailinglist=$mailinglist")}
+        ${note:+form = $(escape "note=$note")}
+        form = $(escape "pkg=$pkg")
+        ${repository:+form = $(escape "repository=$repository")}
+        form = $(escape "summary=$summary")
+        ${topic:+form = $(escape "topic=$topic")}
+        form = $(escape "update=$update")
+        form = $(escape "uploader=$uploader")
+        form = $(escape "version=$version")
+        url = "https://www.ctan.org/submit/$action"
+        EOF
