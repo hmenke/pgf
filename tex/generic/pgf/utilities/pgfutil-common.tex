@@ -66,6 +66,19 @@
 % This macro is expandable.
 \long\def\pgfutil@ifempty#1{\pgfutil@ifx#1\pgfutil@empty}
 
+% \pgfutil@ifstrequal{<lhs>}{<rhs>}{<true code>}{<false code>}
+%
+% Check if <lhs> and <rhs> are equal by string comparison
+%
+% This macro is expandable.
+\long\def\pgfutil@ifstrequal#1#2{%
+  \ifnum\pgfsys@strcmp{\pgfutil@unexpanded{#1}}{\pgfutil@unexpanded{#2}}=0
+    \expandafter\pgfutil@firstoftwo
+  \else
+    \expandafter\pgfutil@secondoftwo
+  \fi
+}
+
 % \pgfutil@ifundefined{<macro name with backslash>}
 %  {<is undefined code>}{<is defined code>}
 %
@@ -227,45 +240,6 @@
 \def\pgfutil@loop#1\pgfutil@repeat{\def\pgfutil@body{#1}\pgfutil@iterate}
 \def\pgfutil@iterate{\pgfutil@body \let\pgfutil@next\pgfutil@iterate \else\let\pgfutil@next\relax\fi \pgfutil@next}
 \let\pgfutil@repeat=\fi % this makes \loop...\if...\repeat skippable
-
-
-% \pgfutil@switch
-%
-% #1: string to switch on
-% #2: sequence of label-value pairs
-%
-% Example:
-%
-% \pgfutil@switch{foo}{%
-%   {foo}{1}%
-%   {bar}{2}%
-%   {default}{X}%
-% }
-%
-% If a statement with the label `default' exists it will be executed
-% if no other label matches.
-
-\long\def\pgfutil@switch#1#2{%
-  \begingroup
-    \def\pgfutil@switch@selected{}%
-    \pgfutil@switch@collect@statements#2{}{}%
-    \ifcsname pgfutil@switch@choice@\detokenize{#1}\endcsname
-      \expandafter\let\expandafter\pgfutil@switch@selected\csname pgfutil@switch@choice@\detokenize{#1}\endcsname
-    \else
-      \ifdefined\pgfutil@switch@choice@default
-        \let\pgfutil@switch@selected\pgfutil@switch@choice@default
-      \fi
-    \fi
-  \expandafter\endgroup\pgfutil@switch@selected
-}
-
-\long\def\pgfutil@switch@collect@statements#1{%
-  \if\relax\detokenize{#1}\relax
-  \else
-    \afterassignment\pgfutil@switch@collect@statements
-    \expandafter\def\csname pgfutil@switch@choice@\detokenize{#1}\expandafter\endcsname
-  \fi
-}
 
 % \pgfutil@switch
 %
