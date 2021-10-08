@@ -1,0 +1,511 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+============================================================
+TEST 1: Using lrbox
+============================================================
+============================================================
+> \box...=
+\hbox(20.16522+0.0)x44.16382
+.\special{color push gray 0}
+.\hbox(20.16522+0.0)x44.16382
+..\glue 22.08191
+..\hbox(0.0+0.0)x0.0, shifted -10.08261
+...\special{ps: }
+...\special{ps::[begin]}
+...\special{ps:: pgfo}
+...\special{ps:: save }
+...\special{ps:: 0 setgray }
+...\special{ps:: 0.3985 pgfw }
+...\hbox(0.0+0.0)x0.0
+....\special{ps:: save }
+....\hbox(0.0+0.0)x0.0
+.....\hbox(0.0+0.0)x0.0
+......\special{ps:: save }
+......\glue 0.0
+......\glue 0.0
+......\glue 0.0
+......\glue 0.0
+......\glue 0.0
+......\special{ps:: save }
+......\special{ps:: [1.0 0.0 0.0 1.0 -18.67912 0.0 ] concat }
+......\special{ps:: pgfs}
+......\special{ps::[end]}
+......\hbox(0.0+0.0)x0.0
+.......\vbox(6.74963+6.74963)x37.49786
+........\hbox(6.74963+6.74963)x37.49786
+.........\glue(\tabskip) 0.0
+.........\hbox(6.74963+6.74963)x5.83298
+..........\glue 0.0 plus 1.0fil
+..........\glue 5.83298
+..........\hbox(5.48575+5.48575)x0.0
+...........\special{ps: }
+...........\special{ps::[begin]}
+...........\special{ps:: pgfo}
+...........\special{ps:: save }
+...........\hbox(0.0+0.0)x0.0
+............\hbox(0.0+0.0)x0.0
+.............\special{ps:: save }
+.............\glue 0.0
+.............\glue 0.0
+.............\glue 0.0
+.............\glue 0.0
+.............\glue 0.0
+.............\special{ps:: save }
+.............\special{ps:: [1.0 0.0 0.0 1.0 -2.49069 -2.14474 ] concat }
+.............\special{ps:: pgfs}
+.............\special{ps::[end]}
+.............\hbox(0.0+0.0)x0.0
+..............\special{ps: 0 setgray }
+..............\hbox(4.30554+0.0)x5.00002
+...............\OT1/cmr/m/n/10 a
+..............\glue 0.0
+.............\glue 0.0
+.............\special{ps::[begin]}
+.............\special{ps:: pgfr}
+.............\glue 0.0
+.............\special{ps:: restore }
+.............\glue 0.0
+.............\special{ps:: restore }
+...........\glue 0.0
+...........\special{ps:: save }
+...........\special{color push rgb 0 0 1}
+...........\special{ps:: 0.0 0.0 moveto }
+...........\special{ps:: 1.99255 0.0 moveto }
+...........\special{ps:: 1.99255 1.10046 1.10046 1.99255 0.0 1.99255 curveto }
+...........\special{ps:: -1.10046 1.99255 -1.99255 1.10046 -1.99255 0.0 curveto }
+...........\special{ps:: -1.99255 -1.10046 -1.10046 -1.99255 0.0 -1.99255 curveto }
+...........\special{ps:: 1.10046 -1.99255 1.99255 -1.10046 1.99255 0.0 curveto }
+...........\special{ps:: closepath }
+...........\special{ps:: 0.0 0.0 moveto }
+...........\special{ps:: pgffill }
+...........\glue 0.0
+...........\special{color pop}
+...........\special{ps:: restore }
+...........\special{ps:: restore }
+...........\special{ps:: pgfc}
+...........\special{ps::[end]}
+.........\glue(\tabskip) 0.0
+.........\hbox(6.74963+6.74963)x5.83298
+..........\glue 5.83298
+..........\glue 0.0 plus 1.0fil
+.........\glue(\tabskip) 0.0
+.........\hbox(6.74963+6.74963)x7.08298
+..........\glue 0.0 plus 1.0fil
+..........\glue 7.08298
+..........\hbox(6.74963+6.74963)x0.0
+...........\special{ps: }
+...........\special{ps::[begin]}
+...........\special{ps:: pgfo}
+...........\special{ps:: save }
+...........\hbox(0.0+0.0)x0.0
+............\hbox(0.0+0.0)x0.0
+.............\special{ps:: save }
+.............\glue 0.0
+.............\glue 0.0
+.............\glue 0.0
+.............\glue 0.0
+.............\glue 0.0
+.............\special{ps:: save }
+.............\special{ps:: [1.0 0.0 0.0 1.0 -3.73604 -3.40393 ] concat }
+.............\special{ps:: pgfs}
+.............\special{ps::[end]}
+.............\hbox(0.0+0.0)x0.0
+..............\special{ps: 0 setgray }
+..............\hbox(6.83331+0.0)x7.50002
+...............\OT1/cmr/m/n/10 X
+..............\glue 0.0
+.............\glue 0.0
+.............\special{ps::[begin]}
+.............\special{ps:: pgfr}
+.............\glue 0.0
+.............\special{ps:: restore }
+.............\glue 0.0
+.............\special{ps:: restore }
+...........\glue 0.0
+...........\special{ps:: save }
+...........\special{color push rgb 0 0 1}
+...........\special{ps:: 0.0 0.0 moveto }
+...........\special{ps:: 1.99255 0.0 moveto }
+...........\special{ps:: 1.99255 1.10046 1.10046 1.99255 0.0 1.99255 curveto }
+...........\special{ps:: -1.10046 1.99255 -1.99255 1.10046 -1.99255 0.0 curveto }
+...........\special{ps:: -1.99255 -1.10046 -1.10046 -1.99255 0.0 -1.99255 curveto }
+...........\special{ps:: 1.10046 -1.99255 1.99255 -1.10046 1.99255 0.0 curveto }
+...........\special{ps:: closepath }
+...........\special{ps:: 0.0 0.0 moveto }
+...........\special{ps:: pgffill }
+...........\glue 0.0
+...........\special{color pop}
+...........\special{ps:: restore }
+...........\special{ps:: restore }
+...........\special{ps:: pgfc}
+...........\special{ps::[end]}
+.........\glue(\tabskip) 0.0
+.........\hbox(6.74963+6.74963)x7.08298
+..........\glue 7.08298
+..........\glue 0.0 plus 1.0fil
+.........\glue(\tabskip) 0.0
+.........\hbox(6.74963+6.74963)x5.83298
+..........\glue 0.0 plus 1.0fil
+..........\glue 5.83298
+..........\hbox(6.45796+6.45796)x0.0
+...........\special{ps: }
+...........\special{ps::[begin]}
+...........\special{ps:: pgfo}
+...........\special{ps:: save }
+...........\hbox(0.0+0.0)x0.0
+............\hbox(0.0+0.0)x0.0
+.............\special{ps:: save }
+.............\glue 0.0
+.............\glue 0.0
+.............\glue 0.0
+.............\glue 0.0
+.............\glue 0.0
+.............\special{ps:: save }
+.............\special{ps:: [1.0 0.0 0.0 1.0 -2.49069 -1.17615 ] concat }
+.............\special{ps:: pgfs}
+.............\special{ps::[end]}
+.............\hbox(0.0+0.0)x0.0
+..............\special{ps: 0 setgray }
+..............\hbox(4.30554+1.94444)x5.00002
+...............\OT1/cmr/m/n/10 g
+..............\glue 0.0
+.............\glue 0.0
+.............\special{ps::[begin]}
+.............\special{ps:: pgfr}
+.............\glue 0.0
+.............\special{ps:: restore }
+.............\glue 0.0
+.............\special{ps:: restore }
+...........\glue 0.0
+...........\special{ps:: save }
+...........\special{color push rgb 0 0 1}
+...........\special{ps:: 0.0 0.0 moveto }
+...........\special{ps:: 1.99255 0.0 moveto }
+...........\special{ps:: 1.99255 1.10046 1.10046 1.99255 0.0 1.99255 curveto }
+...........\special{ps:: -1.10046 1.99255 -1.99255 1.10046 -1.99255 0.0 curveto }
+...........\special{ps:: -1.99255 -1.10046 -1.10046 -1.99255 0.0 -1.99255 curveto }
+...........\special{ps:: 1.10046 -1.99255 1.99255 -1.10046 1.99255 0.0 curveto }
+...........\special{ps:: closepath }
+...........\special{ps:: 0.0 0.0 moveto }
+...........\special{ps:: pgffill }
+...........\glue 0.0
+...........\special{color pop}
+...........\special{ps:: restore }
+...........\special{ps:: restore }
+...........\special{ps:: pgfc}
+...........\special{ps::[end]}
+.........\glue(\tabskip) 0.0
+.........\hbox(6.74963+6.74963)x5.83298
+..........\glue 5.83298
+..........\glue 0.0 plus 1.0fil
+.........\glue(\tabskip) 0.0
+......\glue 0.0
+......\special{ps::[begin]}
+......\special{ps:: pgfr}
+......\glue 0.0
+......\special{ps:: restore }
+......\glue 0.0
+......\special{ps:: restore }
+....\glue 0.0
+....\glue 0.0
+....\special{ps:: restore }
+....\glue 0.0 plus 1.0fil minus 1.0fil
+...\special{ps:: newpath }
+...\special{ps:: restore }
+...\special{ps:: pgfc}
+...\special{ps::[end]}
+...\glue 0.0 plus 1.0fil minus 1.0fil
+.\special{color pop}
+! OK.
+l. ...  \showbox\testbox
+============================================================
+TEST 2: Using \showoutput 
+============================================================
+============================================================
+Completed box being shipped out [1]
+\vbox(578.15999+0.0)x469.75499
+.\hbox(0.0+0.0)x0.0
+.\hbox(0.0+0.0)x0.0
+..\kern -72.26999
+..\vbox(0.0+0.0)x0.0, glue set 72.26999fil
+...\kern -72.26999
+...\hbox(0.0+0.0)x0.0
+....\hbox(0.0+0.0)x0.0, glue set 72.26999fil, shifted 72.26999
+.....\kern -72.26999
+.....\special{! /pgfHrgb{/pgfheight exch def 0.75 setlinewidth [] 0 setdash /pgfsha\ETC.}
+.....\special{! /pgfVrgb{/pgfheight exch def 0.75 setlinewidth [] 0 setdash /pgfsha\ETC.}
+.....\special{! /pgfArgb{ /pgfdiff 8 index round cvi 8 index round cvi sub 2 mul 1 \ETC.}
+.....\special{! /pgfR1rgb{ newpath dup dup dup 0 360 arc clip newpath dup /pgfendx \ETC.}
+.....\special{! /pgfR2rgb{ newpath 0.5 add pgfcircx pgfcircy 3 2 roll 0 360 arc set\ETC.}
+.....\special{! /pgfRrgb{ /pgfdiff 8 index round cvi 8 index round cvi sub 4 mul 1 \ETC.}
+.....\special{! /pgfHcmyk{ /pgfheight exch def 0.75 setlinewidth [] 0 setdash /pgfs\ETC.}
+.....\special{! /pgfVcmyk{ /pgfheight exch def 0.75 setlinewidth [] 0 setdash /pgfs\ETC.}
+.....\special{! /pgfAcmyk{ /pgfdiff 10 index round cvi 10 index round cvi sub 2 mul\ETC.}
+.....\special{! /pgfR1cmyk{ newpath dup dup dup 0 360 arc clip newpath dup /pgfendx\ETC.}
+.....\special{! /pgfR2cmyk{ newpath 0.5 add pgfcircx pgfcircy 3 2 roll 0 360 arc se\ETC.}
+.....\special{! /pgfRcmyk{ /pgfdiff 10 index round cvi 10 index round cvi sub 4 mul\ETC.}
+.....\special{! /pgfHgray{ /pgfheight exch def 0.75 setlinewidth [] 0 setdash /pgfs\ETC.}
+.....\special{! /pgfVgray{ /pgfheight exch def 0.75 setlinewidth [] 0 setdash /pgfs\ETC.}
+.....\special{! /pgfAgray{ /pgfdiff 4 index round cvi 4 index round cvi sub 2 mul 1\ETC.}
+.....\special{! /pgfR1gray{ newpath dup dup dup 0 360 arc clip newpath dup /pgfendx\ETC.}
+.....\special{! /pgfR2gray{ newpath 0.5 add pgfcircx pgfcircy 3 2 roll 0 360 arc se\ETC.}
+.....\special{! /pgfRgray{ /pgfdiff 4 index round cvi 4 index round cvi sub 4 mul 1\ETC.}
+.....\special{!  /pgfsc{}bind def/pgffc{}bind def/pgfstr{stroke}bind def/pgffill{fi\ETC.}
+.....\special{!  /pgfwritesamplecmyk { 4 index 0 5 index pgfcheckcolorrange 255 mul\ETC.}
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+....\glue 0.0 plus 1.0fil minus 1.0fil
+...\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue 0.0
+.\vbox(578.15999+0.0)x469.75499
+..\vbox(0.0+0.0)x469.75499
+...\glue 0.0 plus 1.0fil
+...\hbox(0.0+0.0)x469.75499
+....\special{color push gray 0}
+....\hbox(0.0+0.0)x469.75499
+....\special{color pop}
+..\glue 0.0
+..\glue(\lineskip) 0.0
+..\vbox(578.15999+0.0)x469.75499, glue set 547.99477fil
+...\special{color push gray 0}
+...\special{! /pgf1{gsave exec 1.0 pgfw 2.00002 0.0 moveto -6.00006 4.00005 linet\ETC.}
+...\special{! /pgf2{gsave exec 1.0 pgfw 0.8 pgfw [ ] 0.0 setdash 1 setlinecap 1 s\ETC.}
+...\special{! /pgf3{gsave exec 1.0 pgfw [ ] 0.0 setdash 0.0 -5.00005 moveto 0.0 5\ETC.}
+...\special{! /pgf4{gsave exec 1.0 pgfw [ ] 0.0 setdash -3.00003 -5.00005 moveto \ETC.}
+...\special{! /pgf5{gsave exec 1.0 pgfw [ ] 0.0 setdash -2.00002 -5.00005 moveto \ETC.}
+...\special{! /pgf6{gsave exec 1.0 pgfw [ ] 0.0 setdash -4.50003 -5.00005 moveto \ETC.}
+...\special{! /pgf7{gsave exec 1.0 pgfw -2.50002 0.0 translate [ ] 0.0 setdash 3.\ETC.}
+...\special{! /pgf8{gsave exec 1.0 pgfw [ ] 0.0 setdash 1.0 0.0 moveto -5.00005 3\ETC.}
+...\glue(\topskip) 10.0
+...\hbox(0.0+0.0)x0.0
+....\hbox(0.0+0.0)x20.0
+....\glue(\rightskip) 0.0
+...\penalty 300
+...\glue(\baselineskip) 0.0
+...\hbox(0.0+0.0)x0.0
+....\glue(\rightskip) 0.0
+...\glue(\parskip) 0.0 plus 1.0
+...\glue(\parskip) 0.0
+...\glue(\lineskip) 0.0
+...\hbox(20.16522+0.0)x469.75499, glue set 405.59117fil
+....\hbox(0.0+0.0)x20.0
+....\hbox(20.16522+0.0)x44.16382
+.....\glue 22.08191
+.....\hbox(0.0+0.0)x0.0, shifted -10.08261
+......\special{ps: }
+......\special{ps::[begin]}
+......\special{ps:: pgfo}
+......\special{ps:: save }
+......\special{ps:: 0 setgray }
+......\special{ps:: 0.3985 pgfw }
+......\hbox(0.0+0.0)x0.0
+.......\special{ps:: save }
+.......\hbox(0.0+0.0)x0.0
+........\hbox(0.0+0.0)x0.0
+.........\special{ps:: save }
+.........\glue 0.0
+.........\glue 0.0
+.........\glue 0.0
+.........\glue 0.0
+.........\glue 0.0
+.........\special{ps:: save }
+.........\special{ps:: [1.0 0.0 0.0 1.0 -18.67912 0.0 ] concat }
+.........\special{ps:: pgfs}
+.........\special{ps::[end]}
+.........\hbox(0.0+0.0)x0.0
+..........\vbox(6.74963+6.74963)x37.49786
+...........\hbox(6.74963+6.74963)x37.49786
+............\glue(\tabskip) 0.0
+............\hbox(6.74963+6.74963)x5.83298
+.............\glue 0.0 plus 1.0fil
+.............\glue 5.83298
+.............\hbox(5.48575+5.48575)x0.0
+..............\special{ps: }
+..............\special{ps::[begin]}
+..............\special{ps:: pgfo}
+..............\special{ps:: save }
+..............\hbox(0.0+0.0)x0.0
+...............\hbox(0.0+0.0)x0.0
+................\special{ps:: save }
+................\glue 0.0
+................\glue 0.0
+................\glue 0.0
+................\glue 0.0
+................\glue 0.0
+................\special{ps:: save }
+................\special{ps:: [1.0 0.0 0.0 1.0 -2.49069 -2.14474 ] concat }
+................\special{ps:: pgfs}
+................\special{ps::[end]}
+................\hbox(0.0+0.0)x0.0
+.................\special{ps: 0 setgray }
+.................\hbox(4.30554+0.0)x5.00002
+..................\OT1/cmr/m/n/10 a
+.................\glue 0.0
+................\glue 0.0
+................\special{ps::[begin]}
+................\special{ps:: pgfr}
+................\glue 0.0
+................\special{ps:: restore }
+................\glue 0.0
+................\special{ps:: restore }
+..............\glue 0.0
+..............\special{ps:: save }
+..............\special{color push rgb 0 0 1}
+..............\special{ps:: 0.0 0.0 moveto }
+..............\special{ps:: 1.99255 0.0 moveto }
+..............\special{ps:: 1.99255 1.10046 1.10046 1.99255 0.0 1.99255 curveto }
+..............\special{ps:: -1.10046 1.99255 -1.99255 1.10046 -1.99255 0.0 curveto }
+..............\special{ps:: -1.99255 -1.10046 -1.10046 -1.99255 0.0 -1.99255 curveto }
+..............\special{ps:: 1.10046 -1.99255 1.99255 -1.10046 1.99255 0.0 curveto }
+..............\special{ps:: closepath }
+..............\special{ps:: 0.0 0.0 moveto }
+..............\special{ps:: pgffill }
+..............\glue 0.0
+..............\special{color pop}
+..............\special{ps:: restore }
+..............\special{ps:: restore }
+..............\special{ps:: pgfc}
+..............\special{ps::[end]}
+............\glue(\tabskip) 0.0
+............\hbox(6.74963+6.74963)x5.83298
+.............\glue 5.83298
+.............\glue 0.0 plus 1.0fil
+............\glue(\tabskip) 0.0
+............\hbox(6.74963+6.74963)x7.08298
+.............\glue 0.0 plus 1.0fil
+.............\glue 7.08298
+.............\hbox(6.74963+6.74963)x0.0
+..............\special{ps: }
+..............\special{ps::[begin]}
+..............\special{ps:: pgfo}
+..............\special{ps:: save }
+..............\hbox(0.0+0.0)x0.0
+...............\hbox(0.0+0.0)x0.0
+................\special{ps:: save }
+................\glue 0.0
+................\glue 0.0
+................\glue 0.0
+................\glue 0.0
+................\glue 0.0
+................\special{ps:: save }
+................\special{ps:: [1.0 0.0 0.0 1.0 -3.73604 -3.40393 ] concat }
+................\special{ps:: pgfs}
+................\special{ps::[end]}
+................\hbox(0.0+0.0)x0.0
+.................\special{ps: 0 setgray }
+.................\hbox(6.83331+0.0)x7.50002
+..................\OT1/cmr/m/n/10 X
+.................\glue 0.0
+................\glue 0.0
+................\special{ps::[begin]}
+................\special{ps:: pgfr}
+................\glue 0.0
+................\special{ps:: restore }
+................\glue 0.0
+................\special{ps:: restore }
+..............\glue 0.0
+..............\special{ps:: save }
+..............\special{color push rgb 0 0 1}
+..............\special{ps:: 0.0 0.0 moveto }
+..............\special{ps:: 1.99255 0.0 moveto }
+..............\special{ps:: 1.99255 1.10046 1.10046 1.99255 0.0 1.99255 curveto }
+..............\special{ps:: -1.10046 1.99255 -1.99255 1.10046 -1.99255 0.0 curveto }
+..............\special{ps:: -1.99255 -1.10046 -1.10046 -1.99255 0.0 -1.99255 curveto }
+..............\special{ps:: 1.10046 -1.99255 1.99255 -1.10046 1.99255 0.0 curveto }
+..............\special{ps:: closepath }
+..............\special{ps:: 0.0 0.0 moveto }
+..............\special{ps:: pgffill }
+..............\glue 0.0
+..............\special{color pop}
+..............\special{ps:: restore }
+..............\special{ps:: restore }
+..............\special{ps:: pgfc}
+..............\special{ps::[end]}
+............\glue(\tabskip) 0.0
+............\hbox(6.74963+6.74963)x7.08298
+.............\glue 7.08298
+.............\glue 0.0 plus 1.0fil
+............\glue(\tabskip) 0.0
+............\hbox(6.74963+6.74963)x5.83298
+.............\glue 0.0 plus 1.0fil
+.............\glue 5.83298
+.............\hbox(6.45796+6.45796)x0.0
+..............\special{ps: }
+..............\special{ps::[begin]}
+..............\special{ps:: pgfo}
+..............\special{ps:: save }
+..............\hbox(0.0+0.0)x0.0
+...............\hbox(0.0+0.0)x0.0
+................\special{ps:: save }
+................\glue 0.0
+................\glue 0.0
+................\glue 0.0
+................\glue 0.0
+................\glue 0.0
+................\special{ps:: save }
+................\special{ps:: [1.0 0.0 0.0 1.0 -2.49069 -1.17615 ] concat }
+................\special{ps:: pgfs}
+................\special{ps::[end]}
+................\hbox(0.0+0.0)x0.0
+.................\special{ps: 0 setgray }
+.................\hbox(4.30554+1.94444)x5.00002
+..................\OT1/cmr/m/n/10 g
+.................\glue 0.0
+................\glue 0.0
+................\special{ps::[begin]}
+................\special{ps:: pgfr}
+................\glue 0.0
+................\special{ps:: restore }
+................\glue 0.0
+................\special{ps:: restore }
+..............\glue 0.0
+..............\special{ps:: save }
+..............\special{color push rgb 0 0 1}
+..............\special{ps:: 0.0 0.0 moveto }
+..............\special{ps:: 1.99255 0.0 moveto }
+..............\special{ps:: 1.99255 1.10046 1.10046 1.99255 0.0 1.99255 curveto }
+..............\special{ps:: -1.10046 1.99255 -1.99255 1.10046 -1.99255 0.0 curveto }
+..............\special{ps:: -1.99255 -1.10046 -1.10046 -1.99255 0.0 -1.99255 curveto }
+..............\special{ps:: 1.10046 -1.99255 1.99255 -1.10046 1.99255 0.0 curveto }
+..............\special{ps:: closepath }
+..............\special{ps:: 0.0 0.0 moveto }
+..............\special{ps:: pgffill }
+..............\glue 0.0
+..............\special{color pop}
+..............\special{ps:: restore }
+..............\special{ps:: restore }
+..............\special{ps:: pgfc}
+..............\special{ps::[end]}
+............\glue(\tabskip) 0.0
+............\hbox(6.74963+6.74963)x5.83298
+.............\glue 5.83298
+.............\glue 0.0 plus 1.0fil
+............\glue(\tabskip) 0.0
+.........\glue 0.0
+.........\special{ps::[begin]}
+.........\special{ps:: pgfr}
+.........\glue 0.0
+.........\special{ps:: restore }
+.........\glue 0.0
+.........\special{ps:: restore }
+.......\glue 0.0
+.......\glue 0.0
+.......\special{ps:: restore }
+.......\glue 0.0 plus 1.0fil minus 1.0fil
+......\special{ps:: newpath }
+......\special{ps:: restore }
+......\special{ps:: pgfc}
+......\special{ps::[end]}
+......\glue 0.0 plus 1.0fil minus 1.0fil
+....\kern 0.0
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\glue 0.0 plus 1.0fil
+...\glue 0.0
+..\glue(\baselineskip) 0.0
+..\hbox(0.0+0.0)x469.75499
+...\special{color push gray 0}
+...\hbox(0.0+0.0)x469.75499
+...\special{color pop}
+.\kern 0.0
+.\kern 0.0
