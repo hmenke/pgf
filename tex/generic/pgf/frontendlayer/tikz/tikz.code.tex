@@ -2160,6 +2160,7 @@
     {l}{\let\pgfutil@next\tikz@l@char}%
     {:}{\let\pgfutil@next\tikz@colon@char}%
     {\relax}{\relax\let\pgfutil@next\tikz@scan@next@command}%
+    {i}{\let\pgfutil@next\tikz@i@char}%
   }{\tikz@resetexpandcount\pgfutil@next}{\tikz@expand}%
 }%
 
@@ -2195,6 +2196,43 @@
 \def\tikz@schar{\pgfutil@ifnextchar i{\tikz@sine}{\tikz@svg@path}}%
 
 \def\tikz@g@char r{\pgfutil@ifnextchar i{\tikz@grid}{\tikz@graph}}%
+
+\def\tikz@i@char f{%
+  \pgfutil@ifnextchar{(}%
+  {\tikz@conditional@grouped}%
+  {\tikz@conditional@ungrouped}%
+}
+\def\tikz@conditional@grouped(#1){%
+  \pgfmathtruncatemacro\tikz@conditional@cond{#1}%
+  \tikz@conditional@grabif
+}
+\def\tikz@conditional@ungrouped#1#{
+  \pgfmathtruncatemacro\tikz@conditional@cond{#1}%
+  \tikz@conditional@grabif
+}
+\def\tikz@conditional@grabif#1{%
+  \long\def\tikz@conditional@truebranch{\tikz@scan@next@command#1}%
+  \long\def\tikz@conditional@falsebranch{}%
+  \pgfutil@ifnextchar{e}
+    {\tikz@conditional@maybeelse}
+    {\tikz@conditional@finish}
+}
+\def\tikz@conditional@maybeelse e{%
+  \pgfutil@ifnextchar{l}%
+    {\tikz@conditional@grabelse}%
+    {\tikz@conditional@finish}
+}
+\def\tikz@conditional@grabelse lse#1{%
+  \long\def\tikz@conditional@falsebranch{\tikz@scan@next@command#1}%
+  \tikz@conditional@finish
+}
+\def\tikz@conditional@finish{%
+  \ifnum\tikz@conditional@cond=0
+    \expandafter\tikz@conditional@falsebranch
+  \else
+    \expandafter\tikz@conditional@truebranch
+  \fi
+}
 
 % svg syntax
 % svg[options] {...}
