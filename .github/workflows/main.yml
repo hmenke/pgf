@@ -78,16 +78,6 @@ jobs:
         gpg --verify "pgf.ctan.flatdir.zip.sig"
         rm -rf "$GNUPGHOME"
 
-    - name: "Release: create"
-      uses: actions/create-release@v1
-      id: create_release
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: ${{ env.tagname }}
-        release_name: ${{ env.tagname }}
-        body_path: RELEASE_NOTES.md
-
     - name: "Release: upload assets"
       uses: actions/github-script@v6
       with:
@@ -96,7 +86,16 @@ jobs:
           const { basename, extname } = require('path');
           const { readFile } = require('fs').promises;
 
-          const release_id = '${{ steps.create_release.outputs.id }}'
+          const { owner: currentOwner, repo: currentRepo } = context.repo;
+          const createReleaseResponse = await github.repos.createRelease({
+            owner: currentOwner,
+            repo: currentRepo,
+            tag_name: '${{ env.tagname }}',
+            name: '${{ env.tagname }}',
+            body: await readFile('./RELEASE_NOTES.md')
+          });
+          const { data: { id: release_id } } = createReleaseResponse;
+
           console.log('Release ID:', release_id)
           for (const { path, name } of [
               { path: './build/doc/pgfmanual.pdf',
